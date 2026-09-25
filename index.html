@@ -732,8 +732,12 @@
       <button class="filter-btn" data-filter="excel" onclick="filterProjects(this)">Excel</button>
       <button class="filter-btn" data-filter="python" onclick="filterProjects(this)">Python</button>
       <button class="filter-btn" data-filter="r" onclick="filterProjects(this)">R</button>
+      <button class="filter-btn" data-filter="sql" onclick="filterProjects(this)">SQL</button>
       <button class="filter-btn" data-filter="time-series" onclick="filterProjects(this)">Time Series</button>
       <button class="filter-btn" data-filter="risk" onclick="filterProjects(this)">Risk Modeling</button>
+      <button class="filter-btn" data-filter="climate" onclick="filterProjects(this)">Climate</button>
+      <button class="filter-btn" data-filter="genetics" onclick="filterProjects(this)">Genetics</button>
+      <button class="filter-btn" data-filter="factorial" onclick="filterProjects(this)">Factorial Design</button>
     </div>
 
     <div class="projects-grid">
@@ -798,6 +802,120 @@
             <span class="tag">Python</span>
           </div>
           <button class="btn-outline" onclick="openModal('modal-loan')">View Case Study →</button>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card" data-categories="excel sql risk">
+        <img class="project-thumb" src="asset/project1_dashboard.png" alt="Audit Dashboard" loading="lazy" />
+        <div class="project-body">
+          <p class="project-number">Project 05</p>
+          <h3 class="project-title">Audit the Dashboard — DSN AI Bootcamp 2026</h3>
+          <p class="project-desc">Audited a 432-row retail transaction dataset, cleaned it, tested 8 management claims against the data, and rebuilt the dashboard. Found 7 of 8 claims were wrong.</p>
+          <div class="project-tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">SQL</span>
+          </div>
+          <button class="btn-outline" onclick="openModal('modal-audit')">View Case Study →</button>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card" data-categories="r time-series risk">
+        <div class="project-thumb-placeholder">📊</div>
+        <div class="project-body">
+          <p class="project-number">Project 06 — Thesis</p>
+          <h3 class="project-title">Efficiency of Asymmetric GARCH Estimators for Nigerian Naira Exchange Rates</h3>
+          <p class="project-desc">Modeled Naira volatility against USD, GBP, EUR, and CNY using asymmetric GARCH specifications. TGARCH was the best-fitting model across all four currency pairs.</p>
+          <div class="project-tags">
+            <span class="tag">R</span>
+            <span class="tag">rugarch</span>
+            <span class="tag">Time Series</span>
+            <span class="tag">Quarto</span>
+          </div>
+          <button class="btn-outline" onclick="openModal('modal-thesis-garch')">View Case Study →</button>
+        </div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="project-card" data-categories="r climate">
+        <div class="project-thumb-placeholder">🌍</div>
+        <div class="project-body">
+          <p class="project-number">Project 07</p>
+          <h3 class="project-title">Spatial Analysis of Climate Extremes Across Nigeria</h3>
+          <p class="project-desc">Applied EOF/PCA to nine ETCCDI climate extreme indices to map spatial climate patterns across Nigeria, decomposing leading patterns across temperature and precipitation indices.</p>
+          <div class="project-tags">
+            <span class="tag">R</span>
+            <span class="tag">EOF/PCA</span>
+            <span class="tag">Climate</span>
+          </div>
+          <button class="btn-outline" onclick="openModal('modal-climate')">View Case Study →</button>
+        </div>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="project-card" data-categories="r genetics">
+        <div class="project-thumb-placeholder">🌿</div>
+        <div class="project-body">
+          <p class="project-number">Project 08</p>
+          <h3 class="project-title">Comparative Genetic & Agronomic Analysis of Okra and Maize Varieties</h3>
+          <p class="project-desc">Group project analyzing agronomic and genetic data across okra and maize variety trials under different fertilizer treatments, including full genotypic/phenotypic path analysis.</p>
+          <div class="project-tags">
+            <span class="tag">R</span>
+            <span class="tag">agricolae</span>
+            <span class="tag">Genetics</span>
+            <span class="tag">R Markdown</span>
+          </div>
+          <button class="btn-outline" onclick="openModal('modal-genetics')">View Case Study →</button>
+        </div>
+      </div>
+
+      <!-- Project 9 -->
+      <div class="project-card" data-categories="r excel factorial">
+        <div class="project-thumb-placeholder">🧪</div>
+        <div class="project-body">
+          <p class="project-number">Project 09</p>
+          <h3 class="project-title">Effect of Water Temperature & Stirring Speed on Sugar Dissolution</h3>
+          <p class="project-desc">A 3² factorial experiment testing how water temperature and stirring speed interact to affect sugar dissolution time, using a full factorial ANOVA design.</p>
+          <div class="project-tags">
+            <span class="tag">R</span>
+            <span class="tag">Factorial Design</span>
+            <span class="tag">ANOVA</span>
+          </div>
+          <button class="btn-outline" onclick="openModal('modal-sugar')">View Case Study →</button>
+        </div>
+      </div>
+
+      <!-- Project 10 -->
+      <div class="project-card" data-categories="python factorial">
+        <div class="project-thumb-placeholder">🍞</div>
+        <div class="project-body">
+          <p class="project-number">Project 10</p>
+          <h3 class="project-title">Artisanal Bread Optimization Study</h3>
+          <p class="project-desc">Applied a 3² factorial design framework to optimize artisanal bread production parameters. Report generated programmatically using Python and ReportLab.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">ReportLab</span>
+            <span class="tag">Factorial Design</span>
+          </div>
+          <button class="btn-outline" onclick="openModal('modal-bread')">View Case Study →</button>
+        </div>
+      </div>
+
+      <!-- Project 11 -->
+      <div class="project-card" data-categories="r python">
+        <div class="project-thumb-placeholder">🔗</div>
+        <div class="project-body">
+          <p class="project-number">Project 11</p>
+          <h3 class="project-title">Stochastic Processes — Markov Chains & Queueing Theory</h3>
+          <p class="project-desc">Computational coursework covering Markov chains, Poisson processes, and queueing theory, including simulations and theoretical derivations.</p>
+          <div class="project-tags">
+            <span class="tag">R</span>
+            <span class="tag">Simulation</span>
+            <span class="tag">Stochastic Processes</span>
+          </div>
+          <button class="btn-outline" onclick="openModal('modal-stochastic')">View Case Study →</button>
         </div>
       </div>
 
@@ -1051,6 +1169,367 @@
             <p>✅ Certain borrower characteristics significantly influence default risk.</p>
             <p>✅ Logistic regression effectively estimates default probabilities.</p>
             <p>✅ Model provides interpretable results for credit decision-making.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Audit Dashboard -->
+  <div id="modal-audit" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('modal-audit')">✕</button>
+      <div class="modal-header">
+        <h2>Audit the Dashboard — DSN AI Bootcamp 2026</h2>
+        <p>Data auditing, claim verification, and dashboard rebuild for a retail transaction dataset</p>
+      </div>
+      <div class="modal-grid">
+        <div class="modal-main">
+          <img src="asset/project1_dashboard.png" alt="Audit Dashboard" class="modal-img" />
+          <h3>Problem Statement</h3>
+          <p>Management had built a dashboard and made 8 business claims based on it. The task was to independently audit the underlying dataset, validate the data quality, test each claim, and rebuild a corrected dashboard that accurately reflected the data.</p>
+          <h3>Data Description</h3>
+          <p>A 432-row retail transaction dataset containing sales, cost, and profit records. The dataset had quality issues including duplicate rows and blank cost fields that were being silently read as zero, distorting profit calculations.</p>
+          <h3>Data Cleaning</h3>
+          <ul>
+            <li>Identified and removed 12 duplicate rows, leaving 420 valid records.</li>
+            <li>Detected 31 blank cost fields incorrectly treated as zero in the original dashboard.</li>
+            <li>Validated data types, ranges, and referential integrity across all fields.</li>
+          </ul>
+          <h3>Claim Testing</h3>
+          <ul>
+            <li>Tested all 8 management claims against the cleaned dataset.</li>
+            <li>7 of 8 claims were factually wrong; 1 was misleading due to the blank cost error.</li>
+            <li>The original dashboard overstated total profit by <strong>₦2,026,845</strong> because of the 31 blank cost fields being read as zero.</li>
+          </ul>
+          <h3>Methodology</h3>
+          <ul>
+            <li>Data cleaning and deduplication in Excel.</li>
+            <li>SQL queries to verify aggregations and cross-check claims.</li>
+            <li>Rebuilt dashboard in Power BI using the corrected dataset.</li>
+          </ul>
+          <h3>Conclusion</h3>
+          <p>This project demonstrates the critical importance of data auditing before reporting. A single data quality issue — blank cost fields read as zero — cascaded into a ₦2M+ profit overstatement. The rebuilt dashboard corrects all identified errors and provides an accurate view of business performance.</p>
+        </div>
+        <div class="modal-side">
+          <div class="detail-block">
+            <h4>Tools Used</h4>
+            <div class="project-tags">
+              <span class="tag">Excel</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">SQL</span>
+            </div>
+          </div>
+          <div class="detail-block">
+            <h4>Key Findings</h4>
+            <p>✅ 420 valid rows after removing 12 duplicates.</p>
+            <p>✅ 7 of 8 management claims were incorrect.</p>
+            <p>✅ 1 claim misleading due to blank cost fields.</p>
+            <p>✅ Profit overstated by ₦2,026,845 in original dashboard.</p>
+            <p>✅ Root cause: 31 blank cost fields read as zero.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6: Asymmetric GARCH Thesis -->
+  <div id="modal-thesis-garch" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('modal-thesis-garch')">✕</button>
+      <div class="modal-header">
+        <h2>Efficiency of Asymmetric GARCH Estimators for Nigerian Naira Exchange Rates</h2>
+        <p>Undergraduate thesis — modeling Naira volatility across four currency pairs</p>
+      </div>
+      <div class="modal-grid">
+        <div class="modal-main">
+          <div class="project-thumb-placeholder" style="height:180px; border-radius:8px; margin-bottom:20px; border:1px solid var(--border);">📊</div>
+          <h3>Problem Statement</h3>
+          <p>Standard symmetric GARCH models treat positive and negative shocks equally, which is unrealistic in currency markets where bad news often triggers larger volatility responses than good news. This thesis evaluated whether asymmetric GARCH specifications provide more efficient volatility estimates for the Nigerian Naira against four major currencies.</p>
+          <h3>Data Description</h3>
+          <p>Daily exchange rate data for the Nigerian Naira against USD, GBP, EUR, and CNY, sourced from the Central Bank of Nigeria (CBN). Log returns were computed for each pair prior to modeling.</p>
+          <h3>Data Preparation</h3>
+          <ul>
+            <li>Computed log returns for all four currency pairs.</li>
+            <li>Conducted descriptive statistics including skewness, kurtosis, and Jarque-Bera tests.</li>
+            <li>Detected and corrected a data error that had artificially inflated USD/CNY kurtosis.</li>
+            <li>Tested for stationarity (ADF) and ARCH effects (ARCH-LM test).</li>
+          </ul>
+          <h3>Methodology</h3>
+          <ul>
+            <li>Estimated symmetric GARCH(1,1) as benchmark.</li>
+            <li>Fitted asymmetric models: TGARCH (GJR-GARCH), EGARCH, and APARCH.</li>
+            <li>Applied both Normal and Student-t innovation distributions.</li>
+            <li>Model selection via AIC, BIC, log-likelihood, and Nyblom stability tests.</li>
+            <li>Residual diagnostics: standardized residuals, ACF/PACF, sign-bias tests.</li>
+          </ul>
+          <h3>Conclusion</h3>
+          <p>TGARCH under Student-t innovations was the best-fitting model across all four currency pairs, confirming the presence of leverage effects in Naira exchange rate volatility. The data correction also materially changed the distributional properties of the USD/CNY series, underscoring the importance of data quality checks before model estimation.</p>
+        </div>
+        <div class="modal-side">
+          <div class="detail-block">
+            <h4>Tools Used</h4>
+            <div class="project-tags">
+              <span class="tag">R</span>
+              <span class="tag">rugarch</span>
+              <span class="tag">tseries</span>
+              <span class="tag">FinTS</span>
+              <span class="tag">moments</span>
+              <span class="tag">Quarto</span>
+            </div>
+          </div>
+          <div class="detail-block">
+            <h4>Key Findings</h4>
+            <p>✅ TGARCH (Student-t) best-fitting model across USD, GBP, EUR, CNY.</p>
+            <p>✅ Leverage effects confirmed in all four currency pairs.</p>
+            <p>✅ Asymmetric models outperform symmetric GARCH(1,1).</p>
+            <p>✅ Data error corrected — had inflated USD/CNY kurtosis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 7: Climate Extremes -->
+  <div id="modal-climate" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('modal-climate')">✕</button>
+      <div class="modal-header">
+        <h2>Spatial Analysis of Climate Extremes Across Nigeria</h2>
+        <p>EOF/PCA applied to ETCCDI climate extreme indices</p>
+      </div>
+      <div class="modal-grid">
+        <div class="modal-main">
+          <div class="project-thumb-placeholder" style="height:180px; border-radius:8px; margin-bottom:20px; border:1px solid var(--border);">🌍</div>
+          <h3>Problem Statement</h3>
+          <p>Nigeria's climate is highly heterogeneous — the Sahel in the north, tropical savanna in the middle belt, and equatorial rainforest in the south. Understanding how climate extremes vary spatially across this range is critical for adaptation planning. This project applied dimensionality reduction techniques to summarize spatial patterns in nine climate extreme indices simultaneously.</p>
+          <h3>Data Description</h3>
+          <p>Gridded or station-based data for nine ETCCDI climate extreme indices, including TXx (max of daily max temperature), TX90p (warm days percentage), PRCPTOT (annual total precipitation), Rx5day (max 5-day precipitation), and five additional temperature and precipitation indices across Nigerian weather stations or grid points.</p>
+          <h3>Methodology</h3>
+          <ul>
+            <li>Standardized all nine climate indices for comparability.</li>
+            <li>Applied Empirical Orthogonal Function (EOF) / Principal Component Analysis (PCA) to the combined index matrix.</li>
+            <li>Extracted leading EOFs explaining the dominant modes of spatial variability.</li>
+            <li>Mapped EOF loading patterns to identify regional climate signatures.</li>
+            <li>Plotted PC score time series to examine temporal evolution of each mode.</li>
+            <li>Produced scree plot to determine number of significant components.</li>
+          </ul>
+          <h3>Conclusion</h3>
+          <p>The EOF decomposition successfully separated the spatial patterns of climate extremes into interpretable leading modes, revealing distinct north–south and coastal–inland contrasts in both temperature and precipitation extremes across Nigeria.</p>
+        </div>
+        <div class="modal-side">
+          <div class="detail-block">
+            <h4>Tools Used</h4>
+            <div class="project-tags">
+              <span class="tag">R</span>
+              <span class="tag">EOF/PCA</span>
+              <span class="tag">ggplot2</span>
+              <span class="tag">Climate Analysis</span>
+            </div>
+          </div>
+          <div class="detail-block">
+            <h4>Key Findings</h4>
+            <p>✅ Leading EOFs reveal north–south and coastal–inland climate contrasts.</p>
+            <p>✅ Temperature extremes (TXx, TX90p) and precipitation (PRCPTOT, Rx5day) have distinct spatial loadings.</p>
+            <p>✅ PCA reduces 9 indices to interpretable regional patterns.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 8: Genetics -->
+  <div id="modal-genetics" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('modal-genetics')">✕</button>
+      <div class="modal-header">
+        <h2>Comparative Genetic & Agronomic Analysis of Okra and Maize Varieties</h2>
+        <p>Variety trial analysis with genotypic/phenotypic path analysis and genetic parameters</p>
+      </div>
+      <div class="modal-grid">
+        <div class="modal-main">
+          <div class="project-thumb-placeholder" style="height:180px; border-radius:8px; margin-bottom:20px; border:1px solid var(--border);">🌿</div>
+          <h3>Problem Statement</h3>
+          <p>Selecting high-performing crop varieties and optimal fertilizer treatments requires rigorous statistical analysis of variety trial data. This group project analyzed agronomic and genetic performance across okra and maize variety trials to identify superior genotypes and recommend best management practices.</p>
+          <h3>Data Description</h3>
+          <p>Multi-environment variety trial datasets for okra and maize, including yield and key agronomic traits measured under different fertilizer treatment combinations. Data sourced from field trial records.</p>
+          <h3>Methodology</h3>
+          <ul>
+            <li>Analysis of Variance (ANOVA) using the <code>agricolae</code> package in R.</li>
+            <li>Mean separation with Duncan's Multiple Range Test (DMRT).</li>
+            <li>Genotypic and phenotypic correlation analysis.</li>
+            <li>Path coefficient analysis (direct and indirect effects on yield).</li>
+            <li>Estimation of genetic parameters: GCV%, PCV%, heritability (broad sense), and genetic advance (GA%).</li>
+            <li>Reported using R Markdown.</li>
+          </ul>
+          <h3>Conclusion</h3>
+          <p>The analysis identified best-performing varieties and fertilizer treatments for each crop. High heritability estimates for key traits in the maize datasets indicate that selection for those traits would be effective. Path analysis revealed the direct contributors to yield, supporting targeted breeding decisions.</p>
+        </div>
+        <div class="modal-side">
+          <div class="detail-block">
+            <h4>Tools Used</h4>
+            <div class="project-tags">
+              <span class="tag">R</span>
+              <span class="tag">agricolae</span>
+              <span class="tag">R Markdown</span>
+              <span class="tag">ANOVA</span>
+            </div>
+          </div>
+          <div class="detail-block">
+            <h4>Key Findings</h4>
+            <p>✅ Best-performing varieties identified per crop and objective.</p>
+            <p>✅ High heritability estimates for key maize yield traits.</p>
+            <p>✅ Path analysis identified primary direct contributors to yield.</p>
+            <p>✅ GCV%, PCV%, and genetic advance computed for all maize traits.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 9: Sugar Dissolution -->
+  <div id="modal-sugar" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('modal-sugar')">✕</button>
+      <div class="modal-header">
+        <h2>Effect of Water Temperature & Stirring Speed on Sugar Dissolution</h2>
+        <p>3² full factorial experiment with ANOVA</p>
+      </div>
+      <div class="modal-grid">
+        <div class="modal-main">
+          <div class="project-thumb-placeholder" style="height:180px; border-radius:8px; margin-bottom:20px; border:1px solid var(--border);">🧪</div>
+          <h3>Problem Statement</h3>
+          <p>Understanding how physical conditions affect dissolution rate has practical applications in food science and industrial processes. This experiment investigated whether water temperature, stirring speed, and their interaction significantly affect the time it takes for sugar to fully dissolve.</p>
+          <h3>Experimental Design</h3>
+          <p>A 3² full factorial design with two factors, each at three levels:</p>
+          <ul>
+            <li><strong>Factor A — Water Temperature:</strong> Low, Medium, High</li>
+            <li><strong>Factor B — Stirring Speed:</strong> Low, Medium, High</li>
+            <li>Response variable: Sugar dissolution time (seconds)</li>
+          </ul>
+          <h3>Methodology</h3>
+          <ul>
+            <li>Designed the experiment using a balanced 3² factorial layout.</li>
+            <li>Collected dissolution time measurements across all 9 treatment combinations.</li>
+            <li>Performed two-way ANOVA to test main effects and interaction effect.</li>
+            <li>Assessed assumptions: normality, homogeneity of variance.</li>
+            <li>Interpreted interaction plots to identify optimal treatment combinations.</li>
+          </ul>
+          <h3>Conclusion</h3>
+          <p>The factorial design allowed simultaneous estimation of the individual and combined effects of temperature and stirring speed on dissolution time, providing a more efficient and informative analysis than one-factor-at-a-time experiments.</p>
+        </div>
+        <div class="modal-side">
+          <div class="detail-block">
+            <h4>Tools Used</h4>
+            <div class="project-tags">
+              <span class="tag">R</span>
+              <span class="tag">Excel</span>
+              <span class="tag">Factorial Design</span>
+              <span class="tag">ANOVA</span>
+            </div>
+          </div>
+          <div class="detail-block">
+            <h4>Design Summary</h4>
+            <p>✅ 3² full factorial — 9 treatment combinations.</p>
+            <p>✅ Two factors: temperature & stirring speed.</p>
+            <p>✅ Two-way ANOVA with interaction term.</p>
+            <p>⏳ Final results to be updated on completion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 10: Bread Optimization -->
+  <div id="modal-bread" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('modal-bread')">✕</button>
+      <div class="modal-header">
+        <h2>Artisanal Bread Optimization Study</h2>
+        <p>3² factorial design for optimizing artisanal bread production parameters</p>
+      </div>
+      <div class="modal-grid">
+        <div class="modal-main">
+          <div class="project-thumb-placeholder" style="height:180px; border-radius:8px; margin-bottom:20px; border:1px solid var(--border);">🍞</div>
+          <h3>Problem Statement</h3>
+          <p>Artisanal bread quality depends heavily on production parameters such as fermentation time and baking temperature. Identifying the optimal combination of these parameters can improve consistency and quality outcomes. This project applied a structured factorial design to explore these relationships.</p>
+          <h3>Experimental Design</h3>
+          <p>A 3² full factorial design applied to two key bread production factors at three levels each, measuring a quality response variable (such as loaf volume, texture score, or crust quality) across all 9 treatment combinations.</p>
+          <h3>Methodology</h3>
+          <ul>
+            <li>Defined factors and levels using a 3² factorial layout.</li>
+            <li>Collected quality measurements across all treatment combinations.</li>
+            <li>Performed ANOVA to test factor significance and interaction.</li>
+            <li>Generated PDF report programmatically using Python and ReportLab.</li>
+          </ul>
+          <h3>Conclusion</h3>
+          <p>The factorial approach provided a systematic, efficient method for identifying optimal bread production parameters. The automated PDF report demonstrates integration of statistical analysis with programmatic reporting.</p>
+        </div>
+        <div class="modal-side">
+          <div class="detail-block">
+            <h4>Tools Used</h4>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">ReportLab</span>
+              <span class="tag">Factorial Design</span>
+              <span class="tag">ANOVA</span>
+            </div>
+          </div>
+          <div class="detail-block">
+            <h4>Key Highlights</h4>
+            <p>✅ 3² factorial design — 9 treatment combinations.</p>
+            <p>✅ PDF report auto-generated with Python/ReportLab.</p>
+            <p>✅ ANOVA for main effects and interaction.</p>
+            <p>⏳ Final results to be updated on completion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 11: Stochastic Processes -->
+  <div id="modal-stochastic" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('modal-stochastic')">✕</button>
+      <div class="modal-header">
+        <h2>Stochastic Processes — Markov Chains, Poisson Processes & Queueing Theory</h2>
+        <p>Computational coursework combining theory, derivation, and simulation</p>
+      </div>
+      <div class="modal-grid">
+        <div class="modal-main">
+          <div class="project-thumb-placeholder" style="height:180px; border-radius:8px; margin-bottom:20px; border:1px solid var(--border);">🔗</div>
+          <h3>Overview</h3>
+          <p>This coursework covered foundational and applied topics in stochastic processes, bridging mathematical theory with computational implementation. Topics spanned discrete and continuous-time processes, with a focus on practical modeling applications.</p>
+          <h3>Topics Covered</h3>
+          <ul>
+            <li><strong>Markov Chains:</strong> Transition matrices, steady-state distributions, absorbing states, and classification of states.</li>
+            <li><strong>Poisson Processes:</strong> Arrival rate modeling, inter-arrival times, and compound Poisson processes.</li>
+            <li><strong>Queueing Theory:</strong> M/M/1 and M/M/c queue models, traffic intensity, mean waiting time, and system utilization.</li>
+          </ul>
+          <h3>Computational Work</h3>
+          <ul>
+            <li>Simulated Markov chain trajectories and estimated stationary distributions.</li>
+            <li>Simulated Poisson arrival processes and verified theoretical properties.</li>
+            <li>Computed queue performance metrics and compared simulated vs. theoretical values.</li>
+          </ul>
+          <h3>Conclusion</h3>
+          <p>The coursework demonstrates the ability to translate stochastic theory into working computational models. Simulation-based verification of theoretical results builds intuition for applying these models in real-world contexts such as network traffic, service systems, and financial modeling.</p>
+        </div>
+        <div class="modal-side">
+          <div class="detail-block">
+            <h4>Tools Used</h4>
+            <div class="project-tags">
+              <span class="tag">R</span>
+              <span class="tag">Python</span>
+              <span class="tag">Simulation</span>
+            </div>
+          </div>
+          <div class="detail-block">
+            <h4>Topics</h4>
+            <p>✅ Markov chains & steady-state analysis.</p>
+            <p>✅ Poisson process simulation.</p>
+            <p>✅ M/M/1 & M/M/c queueing models.</p>
+            <p>✅ Theory verified via simulation.</p>
           </div>
         </div>
       </div>

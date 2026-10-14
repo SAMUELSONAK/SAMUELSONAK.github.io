@@ -726,6 +726,7 @@
       <button class="filter-btn" data-filter="sql" onclick="filterProjects(this)">SQL</button>
       <button class="filter-btn" data-filter="time-series" onclick="filterProjects(this)">Time Series</button>
       <button class="filter-btn" data-filter="risk" onclick="filterProjects(this)">Risk Modeling</button>
+      <button class="filter-btn" data-filter="powerbi" onclick="filterProjects(this)">Power BI</button>
       <button class="filter-btn" data-filter="climate" onclick="filterProjects(this)">Climate</button>
       <button class="filter-btn" data-filter="genetics" onclick="filterProjects(this)">Genetics</button>
       <button class="filter-btn" data-filter="factorial" onclick="filterProjects(this)">Factorial Design</button>
@@ -881,6 +882,21 @@
             <span class="tag">Factorial Design</span>
           </div>
           <button class="btn-outline" onclick="openModal('modal-bread')">View Case Study →</button>
+        </div>
+      </div>
+
+      <!-- Project 12 -->
+      <div class="project-card" data-categories="powerbi sql">
+        <img class="project-thumb" src="asset/p12_payments_overview.png" alt="Nigeria Digital Payments Dashboard" loading="lazy" />
+        <div class="project-body">
+          <h3 class="project-title">Nigeria Digital Payments Q1 2026 — Power BI Application</h3>
+          <p class="project-desc">Multi-page interactive analytics app visualizing ₦1.05 Quadrillion in transaction value, channel dominance, and YoY growth across Nigeria's digital payment ecosystem using NIBSS data.</p>
+          <div class="project-tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Data Modeling</span>
+          </div>
+          <button class="btn-outline" onclick="openModal('modal-payments')">View Case Study →</button>
         </div>
       </div>
 
@@ -1510,6 +1526,87 @@
             <p>✅ Poisson process simulation.</p>
             <p>✅ M/M/1 & M/M/c queueing models.</p>
             <p>✅ Theory verified via simulation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 12: Nigeria Digital Payments -->
+  <div id="modal-payments" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('modal-payments')">✕</button>
+      <div class="modal-header">
+        <h2>Nigeria Digital Payments Q1 2026 — Power BI Application</h2>
+        <p>End-to-end multi-page analytics application built on NIBSS payment system data</p>
+      </div>
+      <div class="modal-grid">
+        <div class="modal-main">
+          <img src="asset/p12_payments_overview.png" alt="Overview Page" class="modal-img" />
+
+          <h3>Objective</h3>
+          <p>Built a multi-page interactive analytics application to visualize transaction volume, channel dominance, and year-over-year growth across the Nigerian digital payment ecosystem using NIBSS data. The application is designed for executive-level consumption with trillion-scale figures formatted for clarity.</p>
+
+          <h3>Data Modeling</h3>
+          <p>Engineered a robust relational data model joining transaction fact tables with monthly time series data using a custom period bridging table. This structure enabled seamless cross-page filtering while maintaining accurate aggregations across all four report pages.</p>
+
+          <h3>Advanced DAX</h3>
+          <p>Developed dynamic measures utilizing <code>TREATAS</code> and <code>ISBLANK</code> logic to synchronize parameter slicers across four independent report pages while maintaining visual stability. Measures handle trillion-level figures with custom formatting for readability.</p>
+
+          <h3>Application Design</h3>
+          <p>Designed a professional dark mode UI with a consistent navy and gold color scheme, intuitive tab navigation mirroring the four report pages (Overview, Channels, Trend, Insights), synchronized cross-filtering, and custom formatted tooltips tailored for trillion-level figures.</p>
+
+          <h3>Report Pages</h3>
+
+          <div class="viz-block">
+            <strong>1. Overview — KPI summary & channel breakdown</strong>
+            <img src="asset/p12_payments_overview.png" alt="Overview Page" />
+            <p>Total Transaction Value: ₦1.05 Quadrillion · POS Transactions: 2.92 Billion · POS Volume YoY: -19.90% · Deployed POS Terminals: 5.56 Million. Donut chart shows share of value by channel; bar chart ranks channels by transaction value.</p>
+          </div>
+
+          <div class="viz-block">
+            <strong>2. Channels — Treemap of transaction value by channel</strong>
+            <img src="asset/p12_payments_channels.png" alt="Channels Page" />
+            <p>Treemap visualization makes channel dominance immediately visible. Web Pay (₦529.82T) occupies over half the total area, followed by NIP (₦320.76T), Mobile Pay (₦112.12T), POS (₦59.33T), and ATM (₦26.30T).</p>
+          </div>
+
+          <div class="viz-block">
+            <strong>3. Trend — POS monthly trend line</strong>
+            <img src="asset/p12_payments_trend.png" alt="Trend Page" />
+            <p>Area chart tracking POS transaction value across January–March 2026. Peak in February (₦6.58T) with decline into March (₦6.13T), consistent with the broader YoY volume contraction narrative.</p>
+          </div>
+
+          <div class="viz-block">
+            <strong>4. Insights — Executive narrative page</strong>
+            <img src="asset/p12_payments_insights.png" alt="Insights Page" />
+            <p>Structured executive insights summarizing Web Pay dominance, NIP and Mobile Pay secondary adoption, physical terminal decline, and the cashless shift away from ATM and POS channels.</p>
+          </div>
+
+          <h3>Conclusion</h3>
+          <p>This application demonstrates end-to-end Power BI development — from data modeling and advanced DAX to professional UI design. The insights reveal a clear structural shift in Nigeria's payment landscape: digital endpoints are displacing physical channels, with Web Pay and NIP together accounting for over 80% of total transaction value in Q1 2026.</p>
+        </div>
+        <div class="modal-side">
+          <div class="detail-block">
+            <h4>Tools Used</h4>
+            <div class="project-tags">
+              <span class="tag">Power BI</span>
+              <span class="tag">DAX</span>
+              <span class="tag">Data Modeling</span>
+              <span class="tag">TREATAS</span>
+            </div>
+          </div>
+          <div class="detail-block">
+            <h4>Data Source</h4>
+            <p>NIBSS Payment System Records Q1 2026</p>
+          </div>
+          <div class="detail-block">
+            <h4>Key Insights</h4>
+            <p>✅ Total value: ₦1.05 Quadrillion across Q1 2026.</p>
+            <p>✅ Web Pay dominates at ₦529.82T — over 50% market share.</p>
+            <p>✅ NIP: ₦320.76T · Mobile Pay: ₦112.12T.</p>
+            <p>✅ POS volume down 19.90% YoY — structural decline.</p>
+            <p>✅ ATM: lowest channel at ₦26.30T — cashless shift confirmed.</p>
+            <p>✅ 4-page app with synchronized cross-page slicers.</p>
           </div>
         </div>
       </div>

@@ -232,10 +232,25 @@
 
     .hero-name span { color: var(--accent); }
 
-    .hero-title {
+    .hero-headline {
+      max-width: 680px;
+      margin: 14px auto 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.4;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-headline span { color: var(--accent); }
+
+    .hero-subline {
+      max-width: 520px;
+      margin: 10px auto 0;
+      font-size: 15px;
       color: var(--muted);
-      font-size: 16px;
-      margin-top: 8px;
+      line-height: 1.6;
       position: relative;
       z-index: 1;
     }
@@ -259,6 +274,122 @@
       position: relative;
       z-index: 1;
     }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .stat-item {
+      flex: 1;
+      min-width: 160px;
+      padding: 28px 20px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat-item:last-child { border-right: none; }
+
+    .stat-number {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    @media(max-width: 600px) {
+      .stat-item {
+        min-width: 45%;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+      .stat-item:last-child { border-bottom: none; }
+    }
+
+    /* ── EXPERIENCE & EDUCATION ── */
+    .timeline { display: flex; flex-direction: column; gap: 24px; }
+
+    .timeline-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 24px;
+      transition: border-color 0.2s;
+    }
+    .timeline-item:hover { border-color: var(--border-hover); }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .timeline-role {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .timeline-date {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+      background: var(--skill-bg);
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+
+    .timeline-org {
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .timeline-bullets {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .timeline-bullets li {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .timeline-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 11px;
+      top: 2px;
+    }
+
+    .timeline-bullets li strong { color: var(--text); }
 
     .btn-primary {
       background: var(--accent);
@@ -670,6 +801,8 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -686,6 +819,8 @@
     <div class="mobile-menu" id="mobileMenu">
       <a href="#about" onclick="closeMenu()">About</a>
       <a href="#projects" onclick="closeMenu()">Projects</a>
+      <a href="#experience" onclick="closeMenu()">Experience</a>
+      <a href="#education" onclick="closeMenu()">Education</a>
       <a href="#skills" onclick="closeMenu()">Skills</a>
       <a href="#contact" onclick="closeMenu()">Contact</a>
     </div>
@@ -697,18 +832,34 @@
       <img src="asset/avatar.jpg" alt="Owoseni Samuel" loading="eager" />
     </div>
     <h1 class="hero-name">Owoseni <span>Samuel</span></h1>
-    <p class="hero-title">Data Analyst &nbsp;·&nbsp; Statistics &nbsp;·&nbsp; Time Series &nbsp;·&nbsp; Forecasting &nbsp;·&nbsp; Risk Modeling</p>
-    <p class="hero-bio">
-      Data Analyst and Statistician with a strong foundation in statistical theory and practical analysis.
-      I specialize in exploratory data analysis, hypothesis testing, regression modeling, and time-series
-      analysis — turning complex datasets into clear, actionable insights.
-    </p>
+    <p class="hero-headline">SQL, R, Power BI, Looker, and GARCH models.<br><span>One analyst who handles all of it.</span></p>
+    <p class="hero-subline">Catching a ₦2M profit overstatement hidden in 31 blank cells. Analyzing ₦1.05 Quadrillion in Nigerian digital payments. Turning noisy data into decisions that hold up.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="Resume.pdf" download>⬇ Download Resume</a>
       <a class="btn-ghost" href="#projects">View Projects</a>
       <a class="btn-ghost" href="mailto:samuelokikijesu3@gmail.com">Get in Touch</a>
     </div>
   </section>
+
+  <!-- ── STATS STRIP ── -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <div class="stat-number">12</div>
+      <div class="stat-label">Projects completed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">₦1.05Q</div>
+      <div class="stat-label">In payments analyzed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">2,500+</div>
+      <div class="stat-label">Data anomalies eliminated</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">99.9%</div>
+      <div class="stat-label">Data integrity achieved</div>
+    </div>
+  </div>
 
   <hr class="divider" />
 
@@ -1663,6 +1814,57 @@
           <span class="skill-pill">EDA</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── EXPERIENCE ── -->
+  <section class="section" id="experience">
+    <p class="section-label">Career</p>
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <span class="timeline-role">Statistics Intern</span>
+          <span class="timeline-date">Jun 2025 — Oct 2025</span>
+        </div>
+        <div class="timeline-org">University of Ibadan Microfinance Bank · Ibadan, Nigeria</div>
+        <ul class="timeline-bullets">
+          <li>Directed data validation workflows using <strong>Python, SQL, and dbt</strong>, detecting and eliminating <strong>2,500+ anomalies</strong> and achieving <strong>99.9% data integrity</strong> across three bank program KPI dashboards reviewed weekly by executives.</li>
+          <li>Executed data cleaning on financial and operations data over a 12-week initiative, <strong>decreasing data anomalies by 20%</strong> and ensuring integrity for bank program KPI reports.</li>
+          <li>Developed interactive <strong>Tableau dashboards</strong> visualizing enrollment and financial KPIs for weekly executive reviews, <strong>increasing report accessibility by 25%</strong>.</li>
+          <li>Created <strong>Looker and Metabase dashboards</strong> that tracked the enrollment funnel and financial trends.</li>
+          <li>Implemented <strong>dbt data quality checks</strong>, reducing data discrepancies by <strong>15%</strong> in downstream reporting.</li>
+          <li>Defined key performance indicators with finance and operations teams to guide bank program decisions.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── EDUCATION ── -->
+  <section class="section" id="education">
+    <p class="section-label">Academic</p>
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <span class="timeline-role">B.Tech Statistics — Second Class</span>
+          <span class="timeline-date">2026</span>
+        </div>
+        <div class="timeline-org">Federal University of Technology, Akure (FUTA)</div>
+        <ul class="timeline-bullets">
+          <li><strong>Thesis:</strong> A Comprehensive Analysis of Asymmetric GARCH Estimators in Modeling Volatility in the Nigerian Exchange Rate</li>
+          <li>Modeled Naira volatility against USD, GBP, EUR, and CNY — TGARCH under Student-t innovations was the best-fitting model across all four currency pairs.</li>
+          <li>Detected and corrected a data error that had artificially inflated USD/CNY kurtosis prior to modeling.</li>
+        </ul>
+      </div>
+
     </div>
   </section>
 

@@ -190,8 +190,7 @@
     /* ── HERO ── */
     #about {
       background: var(--hero-bg);
-      padding: 120px 24px 72px;
-      text-align: center;
+      padding: 100px 24px 64px;
       position: relative;
       overflow: hidden;
     }
@@ -200,79 +199,105 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(6,182,212,0.12), transparent);
+      background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(6,182,212,0.08), transparent);
       pointer-events: none;
     }
 
-    .hero-avatar {
-      width: 110px; height: 110px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 0 auto 20px;
-      border: 3px solid var(--accent);
-      box-shadow: 0 0 0 6px rgba(6,182,212,0.12), 0 12px 32px rgba(0,0,0,0.3);
+    .hero-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 48px;
+      align-items: center;
       position: relative;
       z-index: 1;
     }
 
-    .hero-avatar img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: 50% 15%;
-      display: block;
+    .hero-category {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 16px;
     }
 
     .hero-name {
-      font-size: 38px;
+      font-size: clamp(36px, 6vw, 62px);
       font-weight: 800;
-      letter-spacing: -0.5px;
-      position: relative;
-      z-index: 1;
+      letter-spacing: -1.5px;
+      line-height: 1.08;
+      margin-bottom: 16px;
+      color: var(--text);
     }
 
     .hero-name span { color: var(--accent); }
 
-    .hero-headline {
-      max-width: 680px;
-      margin: 14px auto 0;
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1.4;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-headline span { color: var(--accent); }
-
     .hero-subline {
-      max-width: 520px;
-      margin: 10px auto 0;
-      font-size: 15px;
+      font-size: 17px;
+      font-style: italic;
       color: var(--muted);
       line-height: 1.6;
-      position: relative;
-      z-index: 1;
+      margin-bottom: 16px;
     }
 
     .hero-bio {
-      max-width: 620px;
-      margin: 20px auto 0;
-      color: var(--muted);
       font-size: 15px;
-      line-height: 1.7;
-      position: relative;
-      z-index: 1;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 580px;
+      margin-bottom: 24px;
     }
+
+    .open-to-box {
+      border: 1px solid var(--border-hover);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 560px;
+      margin-bottom: 28px;
+    }
+
+    .open-to-box span { color: var(--text); font-weight: 600; }
 
     .hero-actions {
       display: flex;
       gap: 12px;
-      justify-content: center;
       flex-wrap: wrap;
-      margin-top: 28px;
-      position: relative;
-      z-index: 1;
+    }
+
+    .hero-photo {
+      width: 220px;
+      height: 260px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid var(--border-hover);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      flex-shrink: 0;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 10%;
+      display: block;
+    }
+
+    @media(max-width: 700px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .hero-photo {
+        width: 140px;
+        height: 170px;
+        order: -1;
+      }
+      .hero-name { font-size: 36px; }
     }
 
     /* ── STATS STRIP ── */
@@ -828,16 +853,25 @@
 
   <!-- ── HERO ── -->
   <section id="about">
-    <div class="hero-avatar">
-      <img src="asset/avatar.jpg" alt="Owoseni Samuel" loading="eager" />
-    </div>
-    <h1 class="hero-name">Owoseni <span>Samuel</span></h1>
-    <p class="hero-headline">SQL, R, Power BI, Looker, and GARCH models.<br><span>One analyst who handles all of it.</span></p>
-    <p class="hero-subline">Catching a ₦2M profit overstatement hidden in 31 blank cells. Analyzing ₦1.05 Quadrillion in Nigerian digital payments. Turning noisy data into decisions that hold up.</p>
-    <div class="hero-actions">
-      <a class="btn-primary" href="Resume.pdf" download>⬇ Download Resume</a>
-      <a class="btn-ghost" href="#projects">View Projects</a>
-      <a class="btn-ghost" href="mailto:samuelokikijesu3@gmail.com">Get in Touch</a>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-category">Data Analysis &nbsp;·&nbsp; Statistics &nbsp;·&nbsp; Business Intelligence &nbsp;·&nbsp; Forecasting</p>
+        <h1 class="hero-name">SQL, R, Power BI,<br>Looker, and GARCH.<br><span>One analyst who<br>handles all of it.</span></h1>
+        <p class="hero-subline">Catching a ₦2M profit overstatement hidden in 31 blank cells. Analyzing ₦1.05 Quadrillion in Nigerian digital payments.</p>
+        <p class="hero-bio">Data Analyst and Statistician with hands-on experience turning messy financial and operational data into decisions that hold up — from microfinance KPI dashboards to asymmetric volatility modeling of the Nigerian Naira.</p>
+        <div class="open-to-box">
+          <span>Open to:</span> Data Analysis · Data Science · Statistical Consulting · Research & Statistics · Business Intelligence · Forecasting & Modeling<br>
+          <span>Based in:</span> Ibadan · Akure · Lagos &nbsp;·&nbsp; <span>Open to:</span> Full-time · Internships · Remote · Hybrid &nbsp;·&nbsp; <span>Available immediately</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn-primary" href="Resume.pdf" download>⬇ Download Resume</a>
+          <a class="btn-ghost" href="#projects">View Projects</a>
+          <a class="btn-ghost" href="mailto:samuelokikijesu3@gmail.com">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="asset/avatar.jpg" alt="Owoseni Samuel" loading="eager" />
+      </div>
     </div>
   </section>
 
